@@ -1,0 +1,66 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header {
+   color: @light-blue;
+}
+// Mixins
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#menu a {
+  color: #111;
+  .bordered();
+}
+
+#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+
+// loops 
+each(range(1%,6%, 1), {
+  .spans-@{index} {
+    width: @value;
+  }
+});
+
+@iterations: 5;
+.span-loop (@i) when (@i > 0) {
+    .span-@{i} {
+        width: ~"@{i}%";
+    }
+    .span-loop(@i - 1);
+}
+.span-loop (@iterations);
+.class{
+    .foo(4);
+
+}
+
+.foo(@n, @i: 1) when (@i =< @n) {
+  &:nth-child(@{i}) {
+    animation-delay: (100ms + (@i * 20));
+  }
+  .foo(@n, (@i + 1));
+}
+// if else 
+@debug: true;
+
+header {
+    /* guard for attribute */
+    & when (@debug = true) {
+        background-color: yellow;
+    }
+    /* guard for nested class */
+    #title when (@debug = true) {
+        background-color: orange;
+    }
+}

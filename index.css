@@ -1,0 +1,74 @@
+#header {
+  color: #6c94be;
+}
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+.spans-1 {
+  width: 1%;
+}
+.spans-2 {
+  width: 2%;
+}
+.spans-3 {
+  width: 3%;
+}
+.spans-4 {
+  width: 4%;
+}
+.spans-5 {
+  width: 5%;
+}
+.spans-6 {
+  width: 6%;
+}
+.span-5 {
+  width: 5%;
+}
+.span-4 {
+  width: 4%;
+}
+.span-3 {
+  width: 3%;
+}
+.span-2 {
+  width: 2%;
+}
+.span-1 {
+  width: 1%;
+}
+.class:nth-child(1) {
+  animation-delay: 120ms;
+}
+.class:nth-child(2) {
+  animation-delay: 140ms;
+}
+.class:nth-child(3) {
+  animation-delay: 160ms;
+}
+.class:nth-child(4) {
+  animation-delay: 180ms;
+}
+header {
+  /* guard for attribute */
+  background-color: yellow;
+  /* guard for nested class */
+}
+header #title {
+  background-color: orange;
+}
